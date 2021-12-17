@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Наряды академии {% endblock title %}
+
+{% block content %} 
+<header>   
+    <div class="header_row">
+        <div class="mil_logo"> 
+            <div class="mil_logo_image"> <img class="image1" src = "{% static 'img/rusemb.png' %}"> </div>
+        </div>
+        <div class="center_name" >
+            <span class="center_name_main">Военно-космическая академия</span>
+            <span class="center_name_submain">имени А.Ф. Можайского</span>
+        </div>
+    </div>
+</header>      
+<section class="section1">
+    <h1 class="zagolovok">РАСПРЕДЕЛЕНИЕ НАРЯДОВ</h1>
+</section>
+<section class="section2">
+    <aside class = "sidebar">
+        <button class="check_office2">База данных офицеров</button>
+        <button class="check_office2">Добавить</button>
+    </aside>
+</section>
+<section>
+<form action="select1.php" method="get">
+   <p><select>
+    <option disabled>Выберите факультет</option>
+   </select></p>
+   <p><input type="submit" value="Выбрать"></p>
+</form>
+</section>  
+</section>
+<section class="offline">
+    {% for office in list_detail %}
+    <li>
+        <p href="">{{office.name}} {{office.surname}}</p>
+    {% endfor %}
+    </li> 
+</section>
+{% endblock %}

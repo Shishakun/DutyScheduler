@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+body, html{
+    min-width: 100%;
+    min-height: 100%;
+    background: rgb(255, 255, 255);
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 17px;
+    margin: 0;
+}
+
+
+.mil_logo{
+    width: 15%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    size: inherit;
+    
+}
+
+.mil_logo_image{
+    background-size: contain;
+    display: block;
+    height: 100px ;
+    width: 130px;
+    margin: 5px auto ;
+    
+}
+
+.mil_logo_text{
+    font-size: 16px;
+}
+
+.mil_logo_text{
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    position: relative;
+}
+
+.center_name{
+    display: inline-block;
+    padding-top: 45px;
+    padding-left: 30px;
+    display: block;
+    color: white;
+}
+header{
+    top: 0;
+    left: 0;
+    height: 130px;
+    width: relative;
+    background-color:rgb(28, 28, 78);
+    text-align: justify;
+}
+.center_name_main{
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 40px;
+    padding-left: 20px;
+}
+.center_name_submain{
+    padding-left: 20px;
+    text-transform: uppercase;
+    letter-spacing: 7.5px;
+}
+.image1{
+    width: 130%;
+}
+.header_row{
+    position: flex;
+    height: 130px;
+}
+.zagolovok{
+    font-size: 48px;
+    text-align:center;
+    letter-spacing: 38px;
+
+}
+button{
+    display: block;
+}
+.section2{
+    width: 15%;
+}
+.check_office{
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(29, 30, 85);
+    box-shadow: 0 -3px rgb(29, 53, 99) inset;
+    transition: 0.2s;
+} 
+.check_office:hover { background: rgb(48, 160, 180); }
+.check_office:active {
+    background: rgb(35, 128, 172);
+    box-shadow: 0 3px rgb(33, 78, 147) inset;
+}
+/* .offline{
+    padding-left: 300px;
+    font-size: 40px;
+    list-style-type: none;
+
+} */

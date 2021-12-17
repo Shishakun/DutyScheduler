@@ -5,6 +5,6 @@ venv
 .env
 /migrations
 migrations
-/news/migrations
+/webduty/migrations
 dotenv.env
-osiris/settings.py
+duty/settings.py

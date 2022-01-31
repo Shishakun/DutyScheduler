@@ -22,13 +22,20 @@ class Fakultet(models.Model):
         verbose_name = "Факультет"
         verbose_name_plural = "Факультеты"
     
-
+class Duty(models.Model):
+    name = models.TextField('Название наряда', max_length= 100)
+    def __str__(self):
+        return self.name
+    class Meta:
+        verbose_name = "Наряд по"
+        verbose_name_plural = "Наряд по"
 
 class Office(models.Model):
     name = models.TextField('Имя',max_length=100)
     surname = models.TextField('Фамилия',max_length=100,default = "")
     rank = models.ManyToManyField(Rank,'Звание',max_length=30)
     number = models.ManyToManyField(Fakultet,verbose_name="Факультет")
+    duty = models.ManyToManyField(Duty, verbose_name="Название наряда")
     url = models.SlugField(max_length=150,unique=True)
     def __str__(self):
         return self.name

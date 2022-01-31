@@ -100,9 +100,26 @@ button{
     background: rgb(35, 128, 172);
     box-shadow: 0 3px rgb(33, 78, 147) inset;
 }
-/* .offline{
+.offline{
     padding-left: 300px;
     font-size: 40px;
     list-style-type: none;
-
-} */
+    display: flex;
+}
+.FIO{
+    font-size: 18px;
+}
+.stroki{
+    line-height: 1px;
+}
+.flexbox{
+    display: flex;
+    flex-direction: column;
+}
+.instruct{
+    display: flex;
+    padding-left: 300px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+}

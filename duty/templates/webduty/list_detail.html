@@ -18,26 +18,20 @@
 <section class="section1">
     <h1 class="zagolovok">РАСПРЕДЕЛЕНИЕ НАРЯДОВ</h1>
 </section>
-<section class="section2">
-    <aside class = "sidebar">
-        <button class="check_office2">База данных офицеров</button>
-        <button class="check_office2">Добавить</button>
-    </aside>
-</section>
-<section>
-<form action="select1.php" method="get">
-   <p><select>
-    <option disabled>Выберите факультет</option>
-   </select></p>
-   <p><input type="submit" value="Выбрать"></p>
-</form>
-</section>  
-</section>
-<section class="offline">
-    {% for office in list_detail %}
-    <li>
-        <p href="">{{office.name}} {{office.surname}}</p>
-    {% endfor %}
-    </li> 
-</section>
+<div style=" display: flex; list-style-type: none;
+display: flex;">
+    <section class="section2">
+        <aside class = "sidebar">
+            <a class="back" href="/"><button class="check_office2">Назад</button></a>
+        </aside>
+    </section>
+    <div class = "suck" >
+        {% for o in get_office %}
+        <li class = "FIO">
+            <p class =" stroki" fil >{{o.surname}} {{o.name}} </p>
+        {% endfor %}
+        </li> 
+    </div>
+</div>
+
 {% endblock %}

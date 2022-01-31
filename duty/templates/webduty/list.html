@@ -18,18 +18,35 @@
 <section class="section1">
     <h1 class="zagolovok">РАСПРЕДЕЛЕНИЕ НАРЯДОВ</h1>
 </section>
-
-
-<section class="section2">
-    <aside class = "sidebar">
-        <a href="officerslist">
-            <button class="check_office">База данных офицеров</button>
+<div class="flexbox">
+    <section class = "instruct">
+        <p>
+            Инструкция:<br>
+            1. Выберите факультет<br>
+            2. Нажмите кнопку "Распределить"<br>
+            3. В меню загрузки появится excel-файл, откройте его<br>
+            4. Ознакомтесь с нарядами 
+        </p>
+    </section>
+    <section class="section2">
+        <aside class = "sidebar">
+            <a href="officers">
+                <button class="check_office">База данных офицеров</button>
+            </a>
+        </aside>
+    </section>
+    <section class="section2">
+        <a class = "sidebar" ">
+            <button class="check_office">Распределить</button>
         </a>
-    </aside>
-</section>
-<section class="section2">
-    <aside class = "sidebar">
-        <button class="check_office">Распределить</button>
-    </aside>
-</section>
+    </section>
+    <form action="select1.php" method="get" class = "forma">
+        Выберите факультет:
+        <p><select>
+        <option disabled>Выберите факультет</option>
+        </select></p>
+        <p><input type="submit" value="Выбрать"></p>
+    </form>
+</div>
+
 {% endblock %}

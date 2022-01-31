@@ -10,21 +10,19 @@ from .models import Office,Rank,Fakultet
 
 from loguru import logger
 
-
-
-def index(request):
-    return render(request, 'webduty/list.html') 
-
-class OfficeAll:
+class OfficeMain:
     def get_office(self):
-        return Office.objects.all
+        return Office.objects.all()
 
-class OfficeListView(OfficeAll,generic.ListView):
+class OfficeListView(OfficeMain,generic.ListView):
     model=Office
-    queryset = Office.objects.all()
-    template_name = "webduty/list_detail.html"
-    
-    
+    queryset=Office.objects.all()
+    template_name="webduty/list.html"
+
+def index2(request):
+    get_office = Office.objects.all()
+    return render(request,'webduty/list_detail.html',{'get_office': get_office})
+
 
 def form(request):
     form = OfficeForm()

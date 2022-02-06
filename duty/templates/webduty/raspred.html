@@ -4,6 +4,7 @@
 {% block title %} Наряды академии {% endblock title %}
 
 {% block content %} 
+
 <header>   
     <div class="header_row">
         <div class="mil_logo"> 
@@ -18,29 +19,20 @@
 <section class="section1">
     <h1 class="zagolovok">РАСПРЕДЕЛЕНИЕ НАРЯДОВ</h1>
 </section>
-<div style=" display: flex; list-style-type: none;
-display: flex;">
-    <section class="section2">
-        <aside class = "sidebar">
-            <a class="back" href="/"><button class="check_office2">Назад</button></a>
-        </aside>
-    </section>
-    <div class = "suck" >
-        <table border="1">
-            <tr>
-             <th>Звание</th>
-             <th>ФИО</th>
-             <th>Факультет</th>
-            </tr>
-            {% for o in get_office %}
-            <tr>
-                <th>{{o.rank}}</th>
-                <th>{{o.name}}</th>
-                <th>{{o.number}}</th>
-            </tr>
-            {% endfor %}
-          </table>
-    </div>
+<div class="tabless"> 
+    <table border="1">
+        <tr>
+         <th>Дата</th>
+         <th>ФИО</th>
+         <th>Название наряда</th>
+        </tr>
+        {% for o in get_office %}
+        <tr>
+            <th>date</th>
+            <th>{{o.surname}} {{o.name}}</th>
+            <th>Наряд по </th>
+        </tr>
+        {% endfor %}
+      </table>
 </div>
-
 {% endblock %}
